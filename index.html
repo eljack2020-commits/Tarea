@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofimática Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">Ofimática Pro</div>
+        <nav class="nav">
+            <a href="#inicio" class="nav__link activo">Inicio</a>
+            <a href="#procesadores" class="nav__link">Procesadores</a>
+            <a href="#hojas" class="nav__link">Hojas de Cálculo</a>
+            <a href="#docs" class="nav__link">Presentaciones</a>
+            <a href="#colaboracion" class="nav__link">Colaboración</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1>Bienvenido a Ofimática Pro</h1>
+                <p>Domina las herramientas de ofimática: documentos, hojas de cálculo, presentaciones y trabajo en equipo.</p>
+                <a href="#contacto" class="btn">Contáctanos</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <article id="procesadores" class="feature">
+                <h2>Procesadores de Texto</h2>
+                <p>Aprende a crear y editar documentos profesionales con herramientas avanzadas de formato y colaboración.</p>
+            </article>
+            <article id="hojas" class="feature">
+                <h2>Hojas de Cálculo</h2>
+                <p>Domina el análisis de datos con fórmulas, tablas dinámicas y visualizaciones personalizadas.</p>
+            </article>
+            <article id="docs" class="feature">
+                <h2>Presentaciones Impactantes</h2>
+                <p>Diseña diapositivas atractivas que cautiven a tu audiencia con transiciones y animaciones dinámicas.</p>
+            </article>
+            <article id="colaboracion" class="feature">
+                <h2>Colaboración en Equipo</h2>
+                <p>Optimiza el trabajo en equipo con herramientas compartidas, coedición en tiempo real y gestión de proyectos.</p>
+            </article>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <div class="contacto__info">
+                <h2>Formulario de Contacto</h2>
+                <p>¿Tienes dudas o necesitas asesoría? Escríbenos y te responderemos a la brevedad.</p>
+                <ul>
+                    <li><strong>Teléfono:</strong> +34 900 123 456</li>
+                    <li><strong>Email:</strong> contacto@ofimaticapro.com</li>
+                    <li><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00</li>
+                </ul>
+            </div>
+            <form class="contacto__form">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@example.com" required>
+
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+
+                <button type="submit" class="btn btn--submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Ofimática Pro. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
