@@ -1,0 +1,212 @@
+:root {
+    --brand-green: #1b7f4c;
+    --brand-green-light: rgba(27, 127, 76, 0.8);
+    --brand-gray: #f4f6f8;
+    --text-dark: #1f2933;
+    --text-light: #ffffff;
+    --accent: #0fbf85;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--brand-gray);
+    line-height: 1.6;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--brand-green);
+    color: var(--text-light);
+    padding: 1rem 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav__link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav__link:hover,
+.nav__link.activo {
+    opacity: 0.8;
+}
+
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    background-image: linear-gradient(var(--brand-green-light), var(--brand-green-light)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.hero__content {
+    position: relative;
+    max-width: 720px;
+    padding: 0 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.hero__content h1 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 600;
+}
+
+.hero__content p {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.btn {
+    align-self: center;
+    padding: 0.85rem 2.5rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(15, 191, 133, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(15, 191, 133, 0.45);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 4rem 3rem;
+    background: #ffffff;
+}
+
+.feature {
+    padding: 1.75rem;
+    border-radius: 1rem;
+    background: var(--brand-gray);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.feature h2 {
+    color: var(--brand-green);
+    margin-bottom: 0.75rem;
+}
+
+.contacto {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 4rem 3rem;
+    background: linear-gradient(135deg, rgba(27, 127, 76, 0.1), rgba(15, 191, 133, 0.15));
+}
+
+.contacto__info ul {
+    list-style: none;
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.contacto__form {
+    display: grid;
+    gap: 1rem;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contacto__form label {
+    font-weight: 500;
+    color: var(--brand-green);
+}
+
+.contacto__form input,
+.contacto__form textarea {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(27, 127, 76, 0.25);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto__form input:focus,
+.contacto__form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(15, 191, 133, 0.25);
+}
+
+.btn--submit {
+    justify-self: start;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--brand-green);
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .features,
+    .contacto {
+        padding: 3rem 1.5rem;
+    }
+}
