@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofimática Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <span class="material-icons" aria-hidden="true">workspace_premium</span>
+            <span>Ofimática Pro</span>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+        <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú de navegación">
+            <span class="material-icons" aria-hidden="true">menu</span>
+        </label>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a class="activo" href="#inicio"><span class="material-icons" aria-hidden="true">home</span> Inicio</a></li>
+                <li><a href="#procesadores"><span class="material-icons" aria-hidden="true">description</span> Documentos</a></li>
+                <li><a href="#hojas"><span class="material-icons" aria-hidden="true">grid_view</span> Hojas de Cálculo</a></li>
+                <li><a href="#docs"><span class="material-icons" aria-hidden="true">slideshow</span> Presentaciones</a></li>
+                <li class="submenu">
+                    <a href="#colaboracion"><span class="material-icons" aria-hidden="true">group_work</span> Trabajo en Equipo</a>
+                    <ul class="dropdown">
+                        <li><a href="#colaboracion"><span class="material-icons" aria-hidden="true">hub</span> Integraciones</a></li>
+                        <li><a href="#automatizacion"><span class="material-icons" aria-hidden="true">smart_toy</span> Automatizaciones</a></li>
+                        <li><a href="#soporte"><span class="material-icons" aria-hidden="true">support_agent</span> Soporte</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html" target="_blank" rel="noopener"><span class="material-icons" aria-hidden="true">contact_mail</span> Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1>Bienvenido a Ofimática Pro</h1>
+                <p>Domina las herramientas de ofimática: documentos, hojas de cálculo, presentaciones y trabajo en equipo.</p>
+                <a href="contacto.html" class="btn" target="_blank" rel="noopener">Abrir formulario</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <article id="procesadores" class="feature">
+                <h2>Procesadores de Texto</h2>
+                <p>Aprende a crear y editar documentos profesionales con herramientas avanzadas de formato y colaboración.</p>
+            </article>
+            <article id="hojas" class="feature">
+                <h2>Hojas de Cálculo</h2>
+                <p>Domina el análisis de datos con fórmulas, tablas dinámicas y visualizaciones personalizadas.</p>
+            </article>
+            <article id="docs" class="feature">
+                <h2>Presentaciones Impactantes</h2>
+                <p>Diseña diapositivas atractivas que cautiven a tu audiencia con transiciones y animaciones dinámicas.</p>
+            </article>
+            <article id="colaboracion" class="feature">
+                <h2>Colaboración en Equipo</h2>
+                <p>Optimiza el trabajo en equipo con herramientas compartidas, coedición en tiempo real y gestión de proyectos.</p>
+            </article>
+            <article id="automatizacion" class="feature">
+                <h2>Automatizaciones</h2>
+                <p>Diseña flujos automatizados que conecten tus documentos con hojas de cálculo y presentaciones para ahorrar tiempo.</p>
+            </article>
+            <article id="soporte" class="feature">
+                <h2>Soporte Especializado</h2>
+                <p>Accede a asistencia profesional para implementar soluciones de ofimática y capacitar a tu equipo.</p>
+            </article>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <div class="contacto__info">
+                <h2>Formulario de Contacto</h2>
+                <p>¿Tienes dudas o necesitas asesoría? Escríbenos y te responderemos a la brevedad.</p>
+                <ul>
+                    <li><strong>Teléfono:</strong> +34 900 123 456</li>
+                    <li><strong>Email:</strong> contacto@ofimaticapro.com</li>
+                    <li><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00</li>
+                </ul>
+            </div>
+            <div class="contacto__cta">
+                <h3>Completa tu solicitud en otra ventana</h3>
+                <p>Abre nuestro formulario dedicado para compartir los detalles de tu consulta sin perder tu progreso en esta página.</p>
+                <a class="btn btn--outline" href="contacto.html" target="_blank" rel="noopener">Abrir formulario</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Ofimática Pro. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
