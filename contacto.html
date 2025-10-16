@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Ofimática Pro</title>
+    <link rel="stylesheet" href="css/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="contact-page">
+    <header class="navbar">
+        <div class="navbar__container">
+            <div class="logo">
+                <span class="material-icons" aria-hidden="true">workspace_premium</span>
+                <span>Ofimática Pro</span>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú de navegación">
+                <span class="material-icons" aria-hidden="true">menu</span>
+            </label>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><span class="material-icons" aria-hidden="true">home</span> Inicio</a></li>
+                    <li><a href="index.html#procesadores"><span class="material-icons" aria-hidden="true">description</span> Documentos</a></li>
+                    <li><a href="index.html#hojas"><span class="material-icons" aria-hidden="true">grid_view</span> Hojas de Cálculo</a></li>
+                    <li><a href="index.html#docs"><span class="material-icons" aria-hidden="true">slideshow</span> Presentaciones</a></li>
+                    <li class="submenu">
+                        <a href="index.html#colaboracion"><span class="material-icons" aria-hidden="true">group_work</span> Trabajo en Equipo</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#colaboracion"><span class="material-icons" aria-hidden="true">hub</span> Integraciones</a></li>
+                            <li><a href="index.html#automatizacion"><span class="material-icons" aria-hidden="true">smart_toy</span> Automatizaciones</a></li>
+                            <li><a href="index.html#soporte"><span class="material-icons" aria-hidden="true">support_agent</span> Soporte</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html" class="activo" aria-current="page"><span class="material-icons" aria-hidden="true">contact_mail</span> Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-hero__overlay"></div>
+            <div class="contact-hero__container">
+                <span class="section-heading__eyebrow">Conversemos</span>
+                <h1>Formulario de contacto</h1>
+                <p>Cuéntanos en qué podemos ayudarte y uno de nuestros especialistas responderá a tu consulta.</p>
+                <div class="contact-hero__actions">
+                    <a class="btn btn--ghost" href="index.html"><span class="material-icons" aria-hidden="true">arrow_back</span> Volver a la página principal</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-wrapper">
+            <div class="contact-wrapper__container">
+                <div class="contacto__info">
+                    <h2>Información directa</h2>
+                    <p>Si prefieres hablar con nosotros o programar una demostración personalizada, utiliza cualquiera de los siguientes canales.</p>
+                    <ul>
+                        <li><strong>Teléfono:</strong> +34 900 123 456</li>
+                        <li><strong>Email:</strong> contacto@ofimaticapro.com</li>
+                        <li><strong>Dirección:</strong> Calle Innovación 45, Madrid</li>
+                    </ul>
+                    <div class="contact-actions">
+                        <a class="contact-actions__link" href="tel:+34900123456"><span class="material-icons" aria-hidden="true">call</span> Llamar ahora</a>
+                        <a class="contact-actions__link" href="mailto:contacto@ofimaticapro.com"><span class="material-icons" aria-hidden="true">mail</span> Enviar correo</a>
+                    </div>
+                </div>
+
+                <form class="contacto__form" action="https://formsubmit.co/contacto@ofimaticapro.com" method="POST">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@example.com" required>
+
+                    <label for="empresa">Empresa (opcional)</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+                    <button type="submit" class="btn btn--submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; <span id="year"></span> Ofimática Pro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
